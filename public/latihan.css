@@ -1,0 +1,102 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.rounded-circle-border {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1.5px solid black;
+    object-fit: cover;
+}
+.navbar {
+    border-top: 1px solid #000000;
+    width: 100%;
+}
+.equipment-container {
+    font-size: small;
+    margin-bottom: 10px;
+}
+.equipment-card {
+    border: 1px solid #383838;
+    border-radius: 10px;
+    text-align: center;
+    margin: -10px;
+    height: 7.4rem;
+}
+.badge-custom {
+    max-width:60%;
+    font-size:0.3rem;
+    display:block;
+    padding:0rem;
+    line-height:0.75rem;
+    border-radius: 10px 0 6px 0;
+}
+.equipment-card img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    padding-top: 0rem;
+}
+.product {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 8.6px;
+    padding-left: 0.15rem;
+}
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: left;
+    margin: -16px 0 1rem 0.2rem
+}
+.status-text {
+    font-size: 9px;
+    color: #6c6c6c;
+}
+.available {
+    width: 7px;
+    height: 7px;
+    background-color: green;
+    border-radius: 50%;
+}
+.borrowed {
+    color: red;
+    font-weight: bold;
+}
+.book-now {
+    background-color: white;
+    color: black;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #000000;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+}
+.bottom-nav {
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+.nav-item {
+    color: rgb(184, 183, 218);
+    font-size: 12px;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.nav-item.active {
+    color: blue;
+}
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+.nav-icon.nonactive {
+    opacity: 70%;
+}
