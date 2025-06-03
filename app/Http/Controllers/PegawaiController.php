@@ -23,4 +23,6 @@ class PegawaiController extends Controller
      	$alamat = $request->input('alamat');
         return "Nama : ".$nama."<br> Alamat : ".$alamat ."<br> Aslinya : " . $request;
     }
+
+
 }

@@ -83,7 +83,7 @@ body {
         <br>
         <a href="danantara" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">danantara</a>
         <br>
-        <a href="index" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">ets</a>
+        <a href="ets" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">ets</a>
       </div>
     </div>
     <script>
