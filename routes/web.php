@@ -5,6 +5,7 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\SembakoController;
 
 //import java.io.*;
 
@@ -104,6 +105,7 @@ Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
+// route pegawai
 Route::get('/pegawai', [PegawaiDBController::class, 'index']);
 
 Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
@@ -115,3 +117,18 @@ Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+// route pegawai ke frontend
+Route::get('/pegawai/frontend', [PegawaiDBController::class, 'frontend']);
+
+// route sembako TUGAS CURD
+Route::get('/sembako', [SembakoController::class, 'index']);
+Route::get('/sembako/tambah', [SembakoController::class, 'tambah']);
+Route::post('/sembako/store', [SembakoController::class, 'store']);
+Route::get('/sembako/edit/{id}', [SembakoController::class, 'edit']);
+Route::post('/sembako/update/{id}', [SembakoController::class, 'update']);
+Route::get('/sembako/hapus/{id}', [SembakoController::class, 'hapus']);
+Route::get('/sembako/cari', [SembakoController::class, 'cari']);
+
+// route sembako ke frontend
+Route::get('/pegawai/sembako', [PegawaiDBController::class, 'tugascurd']);

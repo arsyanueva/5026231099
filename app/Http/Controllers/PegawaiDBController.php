@@ -103,5 +103,14 @@ class PegawaiDBController extends Controller
 		return view('index',['pegawai' => $pegawai]);
 
 	}
+    public function frontend()
+    {
+        return view('frontend');
+    }
+
+    public function tugascurd()
+    {
+        return view('/sembako');
+    }
 
 }

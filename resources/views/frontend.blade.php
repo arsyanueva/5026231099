@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
-<title>Links website</title>
-<script src="https://unpkg.com/feather-icons"></script>
+@extends('template2')
+
+@section('title', 'Links website')
+
+@push('styles')
 <style>
 body {
     background-color: #eed9d3;
@@ -24,7 +20,7 @@ body {
 .links-container {
   display: flex;
   flex-direction: column;
-  jusify-content: center;
+  justify-content: center;
   align-items: center;
 }
 
@@ -58,7 +54,9 @@ body {
   }
 }
 </style>
-  </head>
+@endpush
+
+@section('content')
   <body>
     <div class="container">
       <div style="text-align: center">
@@ -86,8 +84,10 @@ body {
         <a href="ets" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">ets</a>
       </div>
     </div>
+@endsection
+
+@push('scripts')
     <script>
       feather.replace()
     </script>
-  </body>
-</html>
+@endpush
