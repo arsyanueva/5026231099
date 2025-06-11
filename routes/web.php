@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SembakoController;
+use App\Http\Controllers\KeranjangBelanjaController;
 
 //import java.io.*;
 
@@ -132,3 +133,14 @@ Route::get('/sembako/cari', [SembakoController::class, 'cari']);
 
 // route sembako ke frontend
 Route::get('/pegawai/sembako', [PegawaiDBController::class, 'tugascurd']);
+
+// route keranjang belanja
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index']);
+Route::get('/keranjangbelanja/beli/{ID}', [KeranjangBelanjaController::class, 'beli']);
+Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'store']);
+Route::post('/keranjangbelanja/update/{ID}', [KeranjangBelanjaController::class, 'update']);
+Route::get('/keranjangbelanja/batal/{ID}', [KeranjangBelanjaController::class, 'batal']);
+Route::get('/keranjangbelanja/cari', [KeranjangBelanjaController::class, 'cari']);
+
+// route keranjang belanja ke frontend
+Route::get('/pegawai/keranjangbelanja', [PegawaiDBController::class, 'keranjangbelanja']);

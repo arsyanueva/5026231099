@@ -113,4 +113,9 @@ class PegawaiDBController extends Controller
         return view('/sembako');
     }
 
+    public function keranjangbelanja()
+    {
+        return view('/keranjangbelanja');
+    }
+
 }
