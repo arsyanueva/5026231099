@@ -118,4 +118,10 @@ class PegawaiDBController extends Controller
         return view('/keranjangbelanja');
     }
 
+    public function pagecounter()
+    {
+        return view('/pagecounter');
+    }
+
+
 }

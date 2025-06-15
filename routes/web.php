@@ -7,6 +7,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SembakoController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\PageCounterController;
+use App\Http\Controllers\KaryawanController;
 
 //import java.io.*;
 
@@ -134,6 +136,8 @@ Route::get('/sembako/cari', [SembakoController::class, 'cari']);
 // route sembako ke frontend
 Route::get('/pegawai/sembako', [PegawaiDBController::class, 'tugascurd']);
 
+
+//LATIHAN 1
 // route keranjang belanja
 Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index']);
 Route::get('/keranjangbelanja/beli/{ID}', [KeranjangBelanjaController::class, 'beli']);
@@ -142,5 +146,17 @@ Route::post('/keranjangbelanja/update/{ID}', [KeranjangBelanjaController::class,
 Route::get('/keranjangbelanja/batal/{ID}', [KeranjangBelanjaController::class, 'batal']);
 Route::get('/keranjangbelanja/cari', [KeranjangBelanjaController::class, 'cari']);
 
-// route keranjang belanja ke frontend
-Route::get('/pegawai/keranjangbelanja', [PegawaiDBController::class, 'keranjangbelanja']);
+
+//LATIHAN 2
+//route latihan 2
+Route::get('/pagecounter', [PageCounterController::class, 'show']);
+
+//LATIHAN 3
+//route latihan 3
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::get('/karyawan/edit/{kp}', [KaryawanController::class, 'edit']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::get('/karyawan/hapus/{kp}', [KaryawanController::class, 'hapus']);
+
