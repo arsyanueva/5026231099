@@ -1,4 +1,4 @@
-@extends('template3')
+@extends('template')
 
 @section('content')
     <h1 class="justify-content-center" style="color:rgb(65, 97, 82)">Tugas CURD</h1>

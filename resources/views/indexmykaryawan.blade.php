@@ -12,19 +12,18 @@
             <th>Departemen</th>
             <th>Opsi</th>
         </tr>
-        @foreach($karyawan as $k)
+        @foreach($mykaryawan as $k)
         <tr>
             <td>{{ $k->kodepegawai }}</td>
-            <td>{{ strtoupper($k->namalengkap) }}</td>
+            <td>{{ ucwords(strtolower($k->namalengkap)) }}</td>
             <td>{{ $k->divisi }}</td>
-            <td>{{ strtolower($k->departemen) }}</td>
+            <td>{{ strtoupper($k->departemen) }}</td>
             <td>
-                <a href="/karyawan/edit/{{ $k->kodepegawai }}" class="btn btn-success">Edit</a>
-                <a href="/karyawan/hapus/{{ $k->kodepegawai }}" class="btn btn-danger">Hapus</a>
+                <a href="/mykaryawan/edit/{{ $k->kodepegawai }}" class="btn btn-success">Edit</a>
+                <a href="/mykaryawan/view/{{ $k->kodepegawai }}" class="btn btn-danger">View</a>
             </td>
         </tr>
         @endforeach
     </table>
-        <a href="/karyawan/tambah" class="btn btn-primary">Tambah Karyawan</a>
 
 @endsection

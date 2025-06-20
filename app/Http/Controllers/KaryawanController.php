@@ -10,7 +10,7 @@ class KaryawanController extends Controller
     public function index()
     {
         // mengambil data dari table karyawan
-        $karyawan = DB::table('karyawan')->paginate(15);
+        $karyawan = DB::table('karyawan')->get();
 
         // mengirim data karyawan ke view index
         return view('indexkaryawan', ['karyawan' => $karyawan]);
